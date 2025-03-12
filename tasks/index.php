@@ -35,7 +35,10 @@
             
 
            <?php foreach($taken as $taak): ?>
-                
+                <ul>
+                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?></a></li>
+
+                </ul>
             
                
             <?php endforeach; ?>
