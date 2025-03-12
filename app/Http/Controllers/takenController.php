@@ -2,22 +2,22 @@
 
 $action = $_POST['action'];
 
-    $id = $_POST['id'];
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-    $department = $_POST['department'];
-    $status = $_POST['status'];
-    $deadline = $_POST['deadline'];
-    $user = $_POST['user'];
-    $created_at = $_POST['created at'];
+    
+
 
 if($action == "create") {
 
+   
+    $title = $_POST['title'];
+    $content = $_POST['content'];
+    $department = $_POST['department'];
+   
+
     //1. Verbinding
-    require_once '../../../config/conn.php';
+    require_once '../../../backend/conn.php';
 
     //2. Query
-    $query="INSERT INTO taken (id, titel, beschrijving, afdeling, status, deadline, user) VALUES(:id, :title, :description, :department, :status, :deadline, :user)";
+    $query="INSERT INTO taken (titel, beschrijving, afdeling) VALUES(:title, :content, :department )";
 
     //3. Prepare
     $statement = $conn->prepare($query);
@@ -25,12 +25,8 @@ if($action == "create") {
      //4. Voer statement uit, geef nu waarden mee voor de placeholders
      $statement->execute([
         ":title" => $title,
-        ":description" => $description,
-        ":department" => $department,
-        ":status" => $status,
-        ":deadline" => $deadline,
-        ":user" => $user,
-        ":created_at" => $created_at
+        ":content" => $content,
+        ":department" => $department
         ]);
 
          header("Location: ../../../tasks/index.php?msg=Taak opgeslagen");
@@ -38,13 +34,18 @@ if($action == "create") {
 
 if($action == "edit") {
 
+    $id = $_POST['id'];
+    $title = $_POST['title'];
+    $content = $_POST['content'];
+    $department = $_POST['department'];
+    $status = $_POST['status'];
+
      //1. Verbinding
-     require_once '../../../config/conn.php';
+     require_once '../../../backend/conn.php';
 
      //2. Query
-     $query="UPDATE taken SET titel = :title , beschrijving = :description,
-     afdeling = :department, status = :status, deadline = :deadline, 
-     user = :user, WHERE id = :id
+     $query="UPDATE taken SET titel = :title , beschrijving = :content,
+     afdeling = :department, status = :status WHERE id = :id
      ";
  
      //3. Prepare
@@ -53,12 +54,9 @@ if($action == "edit") {
       //4. Voer statement uit, geef nu waarden mee voor de placeholders
       $statement->execute([
          ":title" => $title,
-         ":description" => $description,
+         ":content" => $content,
          ":department" => $department,
          ":status" => $status,
-         ":deadline" => $deadline,
-         ":user" => $user,
-         ":created_at" => $created_at,
          ":id"  => $id
          ]);
  
@@ -69,7 +67,7 @@ if($action == "edit") {
     $id = $_POST['id'];
 
     //1. Verbinding
-    require_once '../../../config/conn.php';
+    require_once '../../../backend/conn.php';
 
     //2. Query
     $query="DELETE FROM taken WHERE id = :id";
