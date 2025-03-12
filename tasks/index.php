@@ -28,25 +28,18 @@
 
             //5. Fetch
             $taken = $statement->fetchAll(PDO::FETCH_ASSOC);
-
+            ?>
           
             
-            ?>
-            <table>
-                <tr>
-                    <th>Titel</th>
-                   
-                </tr>
-            <?php
+           
+            
 
-            foreach($taken as $taak): ?>
+           <?php foreach($taken as $taak): ?>
                 
-                    <td><?php echo $taak ['titel']; ?></td>
-                    
-                </tr>
+            
                
             <?php endforeach; ?>
-            </table>
+            
             
             
 
