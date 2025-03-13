@@ -4,11 +4,13 @@
 
 <head>
     <title>TakenLijst / overzicht</title>
-
+    <?php require_once "../head.php" ?>
 </head>
 
+
+
 <body>
-    
+    <?php require_once "../header.php" ?>
 
     <div class="container">
         <h1>Taken</h1>
