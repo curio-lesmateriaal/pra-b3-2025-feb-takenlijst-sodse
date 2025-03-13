@@ -35,17 +35,17 @@
             <div class="form-group">
                 <label for="department">Afdeling</label>
                 <select name="department">
-                    <option value="groen" <?php echo ($bericht['afdeling'] == 'groen') ? 'selected' : ''; ?>>Groen
+                    <option value="Groen" <?php echo ($bericht['afdeling'] == 'Groen') ? 'selected' : ''; ?>>Groen
                     </option>
-                    <option value="personeel" <?php echo ($bericht['afdeling'] == 'peronsoneel') ? 'selected' : ''; ?>>Personeel
+                    <option value="Personeel" <?php echo ($bericht['afdeling'] == 'Personeel') ? 'selected' : ''; ?>>Personeel
                     </option>
-                    <option value="horeca" <?php echo ($bericht['afdeling'] == 'horeca') ? 'selected' : ''; ?>>Horeca
+                    <option value="Horeca" <?php echo ($bericht['afdeling'] == 'Horeca') ? 'selected' : ''; ?>>Horeca
                     </option>
-                    <option value="techniek" <?php echo ($bericht['afdeling'] == 'techniek') ? 'selected' : ''; ?>>Techniek
+                    <option value="Techniek" <?php echo ($bericht['afdeling'] == 'Techniek') ? 'selected' : ''; ?>>Techniek
                     </option>
-                    <option value="inkoop" <?php echo ($bericht['afdeling'] == 'inkoop') ? 'selected' : ''; ?>>
+                    <option value="Inkoop" <?php echo ($bericht['afdeling'] == 'Inkoop') ? 'selected' : ''; ?>>
                         Inkoop</option>
-                    <option value="klanten-service" <?php echo ($bericht['afdeling'] == 'klanten-service') ? 'selected' : ''; ?>>Klantenservice</option>
+                    <option value="Klanten-service" <?php echo ($bericht['afdeling'] == 'Klanten-service') ? 'selected' : ''; ?>>Klantenservice</option>
                 </select>
             </div>
 

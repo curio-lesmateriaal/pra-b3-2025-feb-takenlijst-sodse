@@ -53,7 +53,8 @@
 
             <?php foreach ($takenToDo as $taak): ?>
                 <ul>
-                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?></a></li>
+                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?> Afdeling:
+                            <?php echo $taak['afdeling']; ?></a></li>
 
                 </ul>
 
@@ -86,7 +87,9 @@
 
             <?php foreach ($takenInProgress as $taak): ?>
                 <ul>
-                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?></a></li>
+                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?> Afdeling:
+                            <?php echo $taak['afdeling']; ?></a></li>
+
 
                 </ul>
 
@@ -118,7 +121,8 @@
 
             <?php foreach ($takenDone as $taak): ?>
                 <ul>
-                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?></a></li>
+                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?> Afdeling:
+                            <?php echo $taak['afdeling']; ?></a></li>
 
                 </ul>
 

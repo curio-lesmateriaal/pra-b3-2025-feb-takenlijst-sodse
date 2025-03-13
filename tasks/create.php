@@ -25,12 +25,12 @@
             <div class="form-group">
                 <label for="department">Afdeling</label>
                 <select name="department">
-                    <option value="personel">Personeel</option>
-                    <option value="catering">Horeca</option>
-                    <option value="technic">Techniek</option>
-                    <option value="procurment">Inkoop</option>
-                    <option value="guest-service">klantenservice</option>
-                    <option value="green">Groen</option>
+                    <option value="Personeel">Personeel</option>
+                    <option value="Horeca">Horeca</option>
+                    <option value="Techniek">Techniek</option>
+                    <option value="Inkoop">Inkoop</option>
+                    <option value="Klanten-service">klantenservice</option>
+                    <option value="Groen">Groen</option>
                 </select>
 
 
