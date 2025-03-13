@@ -3,9 +3,10 @@
 <header>
     <div class="container-header">
         <nav>
-            <img src="img/logo.png"  alt="logo" class="logo">
-            <a href="index.php">Home</a> |
-            <a href="tasks/index.php">Meldingen</a>
+            <img src="<?php echo $base_url; ?>img/logo.png" alt="logo" class="logo">
+            <a href="<?php echo $base_url; ?>index.php">Home</a> |
+            <a href="<?php echo $base_url; ?>tasks/index.php">Taken</a>
+
         </nav>
         <div>
             <a href="#" style="color: lightgrey;">Inloggen</a>
