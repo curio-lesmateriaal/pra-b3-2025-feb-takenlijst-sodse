@@ -2,7 +2,7 @@
 <html lang="nl">
 
 <head>
-    <title>Prikbord / Aanpassen</title>
+    <title>TakenLijst / Aanpassen</title>
 </head>
 
 <body>
@@ -35,17 +35,17 @@
             <div class="form-group">
                 <label for="department">Afdeling</label>
                 <select name="department">
-                    <option value="green" <?php echo ($bericht['afdeling'] == 'green') ? 'selected' : ''; ?>>Groen
+                    <option value="groen" <?php echo ($bericht['afdeling'] == 'groen') ? 'selected' : ''; ?>>Groen
                     </option>
-                    <option value="staff" <?php echo ($bericht['afdeling'] == 'staff') ? 'selected' : ''; ?>>Personeel
+                    <option value="personeel" <?php echo ($bericht['afdeling'] == 'peronsoneel') ? 'selected' : ''; ?>>Personeel
                     </option>
-                    <option value="catering" <?php echo ($bericht['afdeling'] == 'catering') ? 'selected' : ''; ?>>Horeca
+                    <option value="horeca" <?php echo ($bericht['afdeling'] == 'horeca') ? 'selected' : ''; ?>>Horeca
                     </option>
-                    <option value="technic" <?php echo ($bericht['afdeling'] == 'technic') ? 'selected' : ''; ?>>Techniek
+                    <option value="techniek" <?php echo ($bericht['afdeling'] == 'techniek') ? 'selected' : ''; ?>>Techniek
                     </option>
-                    <option value="procurment" <?php echo ($bericht['afdeling'] == 'procurment') ? 'selected' : ''; ?>>
+                    <option value="inkoop" <?php echo ($bericht['afdeling'] == 'inkoop') ? 'selected' : ''; ?>>
                         Inkoop</option>
-                    <option value="guest-service" <?php echo ($bericht['afdeling'] == 'guest-service') ? 'selected' : ''; ?>>Klantenservice</option>
+                    <option value="klanten-service" <?php echo ($bericht['afdeling'] == 'klanten-service') ? 'selected' : ''; ?>>Klantenservice</option>
                 </select>
             </div>
 

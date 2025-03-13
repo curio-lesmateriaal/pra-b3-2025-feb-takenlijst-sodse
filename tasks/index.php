@@ -15,6 +15,7 @@
     <div class="container">
         <h1>Taken</h1>
         <a href="create.php">Nieuwe Taak &gt;</a>
+        <a href="done.php">Alle meldingen met status "Done" &gt;</a>
 
         <?php
         //DIT IS VOOR MELDING TE TONEN!!!!
