@@ -1,3 +1,5 @@
+<?php require_once 'head.php'; ?>
+
 <header>
     <div class="container-header">
         <nav>
