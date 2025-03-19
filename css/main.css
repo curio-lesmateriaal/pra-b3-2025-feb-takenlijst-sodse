@@ -17,6 +17,18 @@ html {
   line-height: 1.4;
 }
 
+h3 {
+  margin-left: 590px;
+}
+
+.Done {
+  margin-left: 590px;
+}
+
+.TakenDone{
+  margin-left: 590px;
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -89,6 +101,7 @@ textarea {
 
 html{
     font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .inlog{
@@ -114,6 +127,39 @@ nav a:hover {
     display: flex;  
     justify-content: space-between;
     align-items: center;
+}
+
+.container-create{
+  display: flex;
+  align-items: center;
+  margin-left: 25%;
+
+}
+
+#submit-taak {
+  background-color: rgb(37, 150, 190); /* Groene achtergrondkleur */
+  color: white; /* Witte tekstkleur */
+  padding: 10px 20px; /* Binnenmarge rondom de tekst */
+  font-size: 16px; /* Lettergrootte */
+  border: none; /* Verwijder de standaard rand */
+  border-radius: 5px; /* Ronde hoeken */
+  cursor: pointer; /* Cursor verandert naar handje wanneer er over de knop wordt geheven */
+  transition: background-color 0.3s ease; /* Zorgt voor een vloeiende overgang bij hover */
+}
+
+#submit-taak:hover {
+  background-color: #45a049; /* Donkerdere groen bij hover */
+}
+
+#submit-taak:active {
+  background-color: #3e8e41; /* Nog donkerder groen wanneer ingedrukt */
+}
+
+
+
+#title-create{
+  display: flex;
+  justify-content: center;
 }
 
 /* Header stylesheet */
@@ -160,6 +206,9 @@ label{
     width: 600px;
 }
 
+.afdeling-done{
+  margin-left: 80px;
+}
 
 
 

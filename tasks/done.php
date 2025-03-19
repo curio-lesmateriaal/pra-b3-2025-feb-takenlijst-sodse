@@ -3,10 +3,13 @@
 
 <head>
     <title>Takenlijst / Aanpassen</title>
+    <?php require_once "../head.php" ?>
 </head>
 
 <body>
-<h1>DONE</h1>
+<?php require_once "../header.php" ?>
+
+<h1 div class="Done">DONE</h1>
 
 <h3>Alle taken die Done zijn:</h3>
 
@@ -29,16 +32,18 @@
 
 
 
-
+            <div class="TakenDone">
             <?php foreach ($takenDone2 as $taak): ?>
                 <ul>
-                <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?> Afdeling: <?php echo $taak['afdeling']; ?></a></li>
+                <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><span class="titel"><?php echo $taak['titel']; ?></span> <span class="afdeling-done">Afdeling: <?php echo $taak['afdeling']; ?></span></a></li>
+
 
 
                 </ul>
 
 
             <?php endforeach; ?>
+            </div>
 
 
 
