@@ -17,6 +17,18 @@ html {
   line-height: 1.4;
 }
 
+h3 {
+  margin-left: 590px;
+}
+
+.Done {
+  margin-left: 590px;
+}
+
+.TakenDone{
+  margin-left: 590px;
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
