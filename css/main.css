@@ -104,6 +104,8 @@ html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
 .inlog {
   color: lightgray;
   margin-right: 30px;
@@ -160,6 +162,10 @@ nav a:hover {
   
 }
 
+.tasks-ind{
+  color: black;
+}
+
 .tasks-ind2:hover{
   color: red;
   background-color: #00ff0013;
@@ -169,14 +175,21 @@ nav a:hover {
   
 }
 
+.tasks-ind2{
+  color: black;
+}
+
 .tasks-ind3:hover{
   color: red;
   background-color: #00ff0013;
   border-radius: 5px; 
   box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
   text-decoration: underline;
-  
-}
+  }
+
+  .tasks-ind3{
+    color: black;
+  }
 
 .in-progress{
   border: 2px solid black;

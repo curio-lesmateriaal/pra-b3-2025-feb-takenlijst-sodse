@@ -53,7 +53,7 @@
             <?php foreach ($takenToDo as $taak): ?>
                 <ul>
 
-                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind"><?php echo $taak['titel']; ?> Afdeling:
+                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind"><span class="afdeling-done"><?php echo $taak['titel']; ?> Afdeling:
                             <?php echo $taak['afdeling']; ?></a></li>
 
 
@@ -88,12 +88,10 @@
 
 
             <?php foreach ($takenInProgress as $taak): ?>
-                <div class="tasks-ind3">
                     <ul>
-                        <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?> Afdeling:
-                        <?php echo $taak['afdeling']; ?></a></li>
+                        <li><a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind2"><span class="afdeling-done"><?php echo $taak['titel']; ?> Afdeling:
+                                <?php echo $taak['afdeling']; ?></a></li>
                     </ul>
-                </div>
 
 
             <?php endforeach; ?>
@@ -123,8 +121,8 @@
 
             <?php foreach ($takenDone as $taak): ?>
                 <ul>
-                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?> Afdeling:
-                            <?php echo $taak['afdeling']; ?></a></li>
+                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind3"><span class="afdeling-done"><?php echo $taak['titel']; ?> Afdeling:
+                    <?php echo $taak['afdeling']; ?></a></li>
 
                 </ul>
 
