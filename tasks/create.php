@@ -43,7 +43,7 @@
                 <textarea name="content" id="content" class="form-input" rows="4"></textarea>
             </div>
 
-            <input type="submit" value="voer taak in">
+            <input type="submit" id="submit-taak" value="Voer taak in">
 
         </form>
     </div>

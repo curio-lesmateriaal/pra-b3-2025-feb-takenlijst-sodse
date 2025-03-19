@@ -124,6 +124,27 @@ html{
 
 }
 
+#submit-taak {
+  background-color: rgb(37, 150, 190); /* Groene achtergrondkleur */
+  color: white; /* Witte tekstkleur */
+  padding: 10px 20px; /* Binnenmarge rondom de tekst */
+  font-size: 16px; /* Lettergrootte */
+  border: none; /* Verwijder de standaard rand */
+  border-radius: 5px; /* Ronde hoeken */
+  cursor: pointer; /* Cursor verandert naar handje wanneer er over de knop wordt geheven */
+  transition: background-color 0.3s ease; /* Zorgt voor een vloeiende overgang bij hover */
+}
+
+#submit-taak:hover {
+  background-color: #45a049; /* Donkerdere groen bij hover */
+}
+
+#submit-taak:active {
+  background-color: #3e8e41; /* Nog donkerder groen wanneer ingedrukt */
+}
+
+
+
 #title-create{
   display: flex;
   justify-content: center;
