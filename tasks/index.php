@@ -12,11 +12,10 @@
 <body>
     <?php require_once "../header.php" ?>
 
+    <h1>Taken</h1>
+    <a href="create.php">Nieuwe Taak &gt;</a>
+    <a href="done.php">Alle meldingen met status "Done" &gt;</a>
     <div class="container">
-        <h1>Taken</h1>
-        <a href="create.php">Nieuwe Taak &gt;</a>
-        <a href="done.php">Alle meldingen met status "Done" &gt;</a>
-
         <?php
         //DIT IS VOOR MELDING TE TONEN!!!!
         if (isset($_GET['msg'])) {
@@ -53,8 +52,11 @@
 
             <?php foreach ($takenToDo as $taak): ?>
                 <ul>
-                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?> Afdeling:
+
+                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind"><?php echo $taak['titel']; ?> Afdeling:
                             <?php echo $taak['afdeling']; ?></a></li>
+
+
 
                 </ul>
 
@@ -86,12 +88,12 @@
 
 
             <?php foreach ($takenInProgress as $taak): ?>
-                <ul>
-                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?> Afdeling:
-                            <?php echo $taak['afdeling']; ?></a></li>
-
-
-                </ul>
+                <div class="tasks-ind3">
+                    <ul>
+                        <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?> Afdeling:
+                        <?php echo $taak['afdeling']; ?></a></li>
+                    </ul>
+                </div>
 
 
             <?php endforeach; ?>
@@ -136,7 +138,7 @@
 
 
         </div>
-
+    </div>
 </body>
 
 </html>

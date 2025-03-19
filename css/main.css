@@ -134,8 +134,66 @@ nav a:hover {
     margin: 0 auto;
     display: flex;  
     justify-content: space-between;
-    align-items: center;
 }
+
+.to-do{
+ border: 2px solid black;
+ border-radius: 30px;
+ padding-top: 10px;
+ padding-bottom: 200px;
+ padding-left: 50px;
+ padding-right: 50px;
+ margin-right: 50px;
+ margin-left: 0px;
+}
+
+.tasks-ind:hover{
+  color: red;
+  background-color: #00ff0013;
+  border-radius: 5px; 
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
+  text-decoration: underline;
+  
+}
+
+.tasks-ind2:hover{
+  color: red;
+  background-color: #00ff0013;
+  border-radius: 5px; 
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
+  text-decoration: underline;
+  
+}
+
+.tasks-ind3:hover{
+  color: red;
+  background-color: #00ff0013;
+  border-radius: 5px; 
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
+  text-decoration: underline;
+  
+}
+
+.in-progress{
+  border: 2px solid black;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-right: 50px;
+}
+
+.done{
+  border: 2px solid black;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
 
 .container-create {
   display: flex;
