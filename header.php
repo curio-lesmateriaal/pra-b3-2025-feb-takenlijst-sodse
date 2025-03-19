@@ -8,8 +8,8 @@
             <a href="<?php echo $base_url; ?>tasks/index.php">Taken</a>
 
         </nav>
-        <div>
-            <a href="#" style="color: lightgrey;">Inloggen</a>
+        <div class="inlog">
+            <a href="<?php echo $base_url; ?>tasks/inloggen.php">Inloggen</a>
         </div>
     </div>
 </header>
