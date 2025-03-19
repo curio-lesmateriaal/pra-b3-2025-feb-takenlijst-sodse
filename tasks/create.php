@@ -5,15 +5,18 @@
 
 <head>
     <title>TakenLijst / Nieuwe taak</title>
+    <?php require_once "../head.php" ?>
 
 </head>
 
 <body>
 
+    <?php require_once '../header.php'; ?>
+    
+    <h1 id="title-create">Nieuwe taak</h1>
 
 
-    <div class="container">
-        <h1>Nieuwe Taak</h1>
+    <div class="container-create">
 
         <form action="../app/Http/Controllers/takenController.php" method="POST">
             <input type="hidden" name="action" value="create">

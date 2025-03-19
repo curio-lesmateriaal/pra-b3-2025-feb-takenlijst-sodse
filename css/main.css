@@ -89,7 +89,11 @@ textarea {
 
 html{
     font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+
 
 .container{
     max-width: 1024px;
@@ -97,6 +101,18 @@ html{
     display: flex;  
     justify-content: space-between;
     align-items: center;
+}
+
+.container-create{
+  display: flex;
+  align-items: center;
+  margin-left: 25%;
+
+}
+
+#title-create{
+  display: flex;
+  justify-content: center;
 }
 
 /* Header stylesheet */
@@ -129,6 +145,7 @@ background-color: white;
 .general-homepage{
 display: flex;
 align-items: center;
+color: red;
 
 }
 label{
