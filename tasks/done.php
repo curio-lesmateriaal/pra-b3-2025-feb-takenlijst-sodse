@@ -35,7 +35,8 @@
             <div class="TakenDone">
             <?php foreach ($takenDone2 as $taak): ?>
                 <ul>
-                <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><?php echo $taak['titel']; ?> Afdeling: <?php echo $taak['afdeling']; ?></a></li>
+                <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><span class="titel"><?php echo $taak['titel']; ?></span> <span class="afdeling-done">Afdeling: <?php echo $taak['afdeling']; ?></span></a></li>
+
 
 
                 </ul>
