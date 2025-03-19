@@ -129,14 +129,29 @@ nav a:hover {
     align-items: center;
 }
 
-.container-create{
+.container-create {
   display: flex;
   align-items: center;
   margin-left: 25%;
+  font-size: 20px;
 
 }
 
-#submit-taak {
+.container-edit {
+  display: flex;
+  align-items: center;
+  margin-left: 35%;
+  font-size: 20px;
+
+}
+
+#title-edit{
+  display: flex;
+  justify-content: center;
+}
+
+
+.submit-taak {
   background-color: rgb(37, 150, 190); 
   color: white; 
   padding: 10px 20px; 
@@ -147,11 +162,24 @@ nav a:hover {
   transition: background-color 0.3s ease;
 }
 
-#submit-taak:hover {
+.submit-taak:hover {
   background-color: rgb(30, 120, 160); /* Donkerdere blauw bij hover */
 }
 
+.submit-taak-delete {
+  background-color: red; 
+  color: white; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.submit-taak-delete:hover {
+  background-color: darkred; /* Donkerdere blauw bij hover */
+}
 
 
 
