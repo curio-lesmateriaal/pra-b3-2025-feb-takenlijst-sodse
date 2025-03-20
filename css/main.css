@@ -316,8 +316,7 @@ textarea {
   font-optical-sizing: auto;
   font-weight: 500;
   background-color: rgb(37, 150, 190);
-  border: 2px solid black;
-  border-radius: 2px;
+  border: 1px solid gray;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 
@@ -330,7 +329,6 @@ textarea {
   background-size: 40% auto; /* Scales the width to 50% of the container, height adjusts automatically */
   background-repeat: no-repeat;
   background-position: center;
-  padding-bottom: 10%;
 }
 
 
@@ -389,8 +387,11 @@ label {
 }
 
 footer {
-  margin-top: 30%;
+  margin-top: 408px;
   background-color: green;
+  height: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
  
 }
 
