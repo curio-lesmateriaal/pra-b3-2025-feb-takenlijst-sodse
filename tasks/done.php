@@ -9,7 +9,7 @@
 <body>
 <?php require_once "../header.php" ?>
 
-<h1 div class="Done">DONE</h1>
+<h1 div class="doneweb">DONE</h1>
 
 <h3>Alle taken die Done zijn:</h3>
 
