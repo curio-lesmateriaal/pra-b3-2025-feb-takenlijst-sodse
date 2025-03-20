@@ -25,7 +25,7 @@ h3 {
   margin-left: 590px;
 }
 
-.TakenDone{
+.TakenDone {
   margin-left: 590px;
 }
 
@@ -99,37 +99,39 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-html{
-    font-size: 16px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html {
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.inlog{
+.inlog {
   color: lightgray;
   margin-right: 30px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  
+
 }
-a{
+
+a {
   text-decoration: none;
 }
+
 nav a:hover {
   color: #0022ff;
   background-color: #00ff0013;
-  border-radius: 5px; 
+  border-radius: 5px;
   box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
   text-decoration: underline;
 }
 
-.container{
-    max-width: 1024px;
-    margin: 0 auto;
-    display: flex;  
-    justify-content: space-between;
-    align-items: center;
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.container-create{
+.container-create {
   display: flex;
   align-items: center;
   margin-left: 25%;
@@ -137,31 +139,32 @@ nav a:hover {
 }
 
 #submit-taak {
-  background-color: rgb(37, 150, 190); 
-  color: white; 
-  padding: 10px 20px; 
-  font-size: 16px; 
-  border: none; 
-  border-radius: 5px; 
+  background-color: rgb(37, 150, 190);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 #submit-taak:hover {
-  background-color: rgb(30, 120, 160); /* Donkerdere blauw bij hover */
+  background-color: rgb(30, 120, 160);
+  /* Donkerdere blauw bij hover */
 }
 
 
 
 
 
-#title-create{
+#title-create {
   display: flex;
   justify-content: center;
 }
 
 /* Header stylesheet */
-.container-header{
+.container-header {
   max-width: 100%;
   margin: 0 auto;
   display: flex;
@@ -175,36 +178,55 @@ nav a:hover {
   background-color: rgb(37, 150, 190);
 }
 
+.parallex {
+  background-size: cover;
+}
+
+.bgimg-banner {
+  background-image: url(../img/logo.png);
+  background-size: 40% auto; /* Scales the width to 50% of the container, height adjusts automatically */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 10%;
+}
+
+
 /* Logo voor de header */
-.logo{ 
+.logo {
   height: 7rem;
-  border-right: 3px solid rgba(211, 211, 211, 0.812); 
-  padding: 5px; 
+  border-right: 3px solid rgba(211, 211, 211, 0.812);
+  padding: 5px;
   display: inline-block;
-background-color: white;
-margin-right: 10px;
-}
-.form-group{
-    margin: 1rem 0;
+  background-color: white;
+  margin-right: 10px;
 }
 
-.general-homepage{
-display: flex;
-align-items: center;
-
-}
-label{
-    cursor: pointer;
-    display: inline-block;
-    min-width: 140px;
-    vertical-align: top;
+.form-group {
+  margin: 1rem 0;
 }
 
-.form-input{
-    width: 600px;
+.general-homepage {
+  color: green;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  margin-left: 400px;
+  margin-top: 65px;
 }
 
-.afdeling-done{
+label {
+  cursor: pointer;
+  display: inline-block;
+  min-width: 140px;
+  vertical-align: top;
+}
+
+.form-input {
+  width: 600px;
+}
+
+.afdeling-done {
   margin-left: 80px;
 }
 
@@ -221,6 +243,12 @@ label{
 .hidden,
 [hidden] {
   display: none !important;
+}
+
+footer {
+  margin-top: 30%;
+  background-color: green;
+ 
 }
 
 /*
@@ -303,9 +331,9 @@ label{
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -316,6 +344,7 @@ label{
    ========================================================================== */
 
 @media print {
+
   *,
   *::before,
   *::after {
@@ -383,4 +412,3 @@ label{
     page-break-after: avoid;
   }
 }
-
