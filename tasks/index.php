@@ -3,7 +3,7 @@
 <html lang="nl">
 
 <head>
-    <title>TakenLijst / overzicht</title>
+    <title>TakenLijst / Overzicht</title>
     <?php require_once "../head.php" ?>
 </head>
 
