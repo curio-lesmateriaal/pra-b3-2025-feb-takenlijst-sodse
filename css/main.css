@@ -159,15 +159,6 @@
     text-decoration: underline;
   }
    
-  .TakenDone:hover {
-    color: #0022ff;
-    background-color: #00ff0013;
-    border-radius: 5px;
-    box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
-    text-decoration: underline;
-    margin-right: 570px;
-  }
-   
   .container {
     max-width: 1024px;
     margin: 0 auto;
