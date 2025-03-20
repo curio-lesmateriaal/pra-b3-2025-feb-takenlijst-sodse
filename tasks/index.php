@@ -13,9 +13,12 @@
     <?php require_once "../header.php" ?>
 
     <h1>Taken</h1>
-    <a href="create.php">Nieuwe Taak &gt;</a>
-    <a href="done.php">Alle meldingen met status "Done" &gt;</a>
-    <div class="container">
+    <div class="links">
+        <a href="create.php" id="links1">Nieuwe Taak</a>
+        <a href="done.php" id="links2">Alle meldingen met status "Done"</a>
+    </div>
+
+    <div class="msg">
         <?php
         //DIT IS VOOR MELDING TE TONEN!!!!
         if (isset($_GET['msg'])) {
@@ -26,8 +29,9 @@
             echo "<p>$message</p>";
         }
         ?>
+    </div>
 
-
+    <div class="container">
         <div class="to-do">
             <h1>To do</h1>
             <?php
@@ -53,8 +57,9 @@
             <?php foreach ($takenToDo as $taak): ?>
                 <ul>
 
-                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind"><span class="afdeling-done"><?php echo $taak['titel']; ?> Afdeling:
-                            <?php echo $taak['afdeling']; ?></a></li>
+                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind"><span
+                                class="afdeling-done"><?php echo $taak['titel']; ?> Afdeling:
+                                <?php echo $taak['afdeling']; ?></a></li>
 
 
 
@@ -88,10 +93,11 @@
 
 
             <?php foreach ($takenInProgress as $taak): ?>
-                    <ul>
-                        <li><a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind2"><span class="afdeling-done"><?php echo $taak['titel']; ?> Afdeling:
+                <ul>
+                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind2"><span
+                                class="afdeling-done"><?php echo $taak['titel']; ?> Afdeling:
                                 <?php echo $taak['afdeling']; ?></a></li>
-                    </ul>
+                </ul>
 
 
             <?php endforeach; ?>
@@ -121,8 +127,9 @@
 
             <?php foreach ($takenDone as $taak): ?>
                 <ul>
-                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind3"><span class="afdeling-done"><?php echo $taak['titel']; ?> Afdeling:
-                    <?php echo $taak['afdeling']; ?></a></li>
+                    <li><a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind3"><span
+                                class="afdeling-done"><?php echo $taak['titel']; ?> Afdeling:
+                                <?php echo $taak['afdeling']; ?></a></li>
 
                 </ul>
 
