@@ -12,7 +12,7 @@
 <body>
 
     <?php require_once '../header.php'; ?>
-    
+
     <h1 id="title-create">Nieuwe taak</h1>
 
 
@@ -35,16 +35,15 @@
                     <option value="Klanten-service">klantenservice</option>
                     <option value="Groen">Groen</option>
                 </select>
-
-
             </div>
+
+
             <div class="form-group">
                 <label for="content">Beschrijving</label>
                 <textarea name="content" id="content" class="form-input" rows="4"></textarea>
             </div>
 
-            <input type="submit" id="submit-taak" value="Voer taak in">
-
+            <input type="submit" class="submit-taak" value="Voer taak in">
         </form>
     </div>
 

@@ -104,6 +104,8 @@ html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
 .inlog {
   color: lightgray;
   margin-right: 30px;
@@ -123,6 +125,15 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.TakenDone:hover {
+  color: #0022ff;
+  background-color: #00ff0013;
+  border-radius: 5px;
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
+  text-decoration: underline;
+  margin-right: 570px;
+}
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
@@ -131,30 +142,159 @@ nav a:hover {
   align-items: center;
 }
 
+.to-do{
+ border: 2px solid black;
+ border-radius: 30px;
+ padding-top: 10px;
+ padding-bottom: 200px;
+ padding-left: 50px;
+ padding-right: 50px;
+ margin-right: 50px;
+ margin-left: 0px;
+}
+
+.tasks-ind:hover{
+  color: red;
+  background-color: #00ff0013;
+  border-radius: 5px; 
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
+  text-decoration: underline;
+  
+}
+
+.tasks-ind{
+  color: black;
+}
+
+.tasks-ind2:hover{
+  color: red;
+  background-color: #00ff0013;
+  border-radius: 5px; 
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
+  text-decoration: underline;
+  
+}
+
+.tasks-ind2{
+  color: black;
+}
+
+.tasks-ind3:hover{
+  color: red;
+  background-color: #00ff0013;
+  border-radius: 5px; 
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
+  text-decoration: underline;
+  }
+
+  .tasks-ind3{
+    color: black;
+  }
+
+.in-progress{
+  border: 2px solid black;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-right: 50px;
+}
+
+.done{
+  border: 2px solid black;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+
 .container-create {
   display: flex;
   align-items: center;
   margin-left: 25%;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 50px;
+  margin-right: 300px;
+  background-color: lightgray;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 
 }
 
-#submit-taak {
+label,
+input,
+textarea {
+  margin-left: 100px;
+
+}
+
+.container-edit {
+  display: flex;
+  align-items: center;
+  margin-right: 300px;
+  margin-left: 20%;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  background-color: lightgray;
+}
+
+#title-edit {
+  display: flex;
+  justify-content: center;
+}
+
+
+.submit-taak {
   background-color: rgb(37, 150, 190);
   color: white;
-  padding: 10px 20px;
+  padding: 10px 100px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 10px;
 }
 
-#submit-taak:hover {
+.submit-taak:hover {
   background-color: rgb(30, 120, 160);
   /* Donkerdere blauw bij hover */
 }
 
+#department {
+  margin-left: 100px;
+}
 
+#status {
+  margin-left: 100px;
+}
+
+.submit-taak-delete {
+  background-color: red;
+  color: white;
+  padding: 25px 385px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin-right: 300px;
+  margin-left: 20%;
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+.submit-taak-delete:hover {
+  background-color: darkred;
+  /* Donkerdere blauw bij hover */
+}
 
 
 
@@ -176,6 +316,9 @@ nav a:hover {
   font-optical-sizing: auto;
   font-weight: 500;
   background-color: rgb(37, 150, 190);
+  border: 2px solid black;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 
 .parallex {
