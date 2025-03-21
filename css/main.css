@@ -370,10 +370,8 @@
    
   .bgimg-banner {
     background-image: url(../img/logo.png);
-    background-size: 40% auto; /* Scales the width to 50% of the container, height adjusts automatically */
     background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: 10%;
   }
    
    
@@ -399,6 +397,7 @@
     font-size: 1rem;
     margin-left: 400px;
     margin-top: 65px;
+    background-color: white;
   }
    
   label {
@@ -416,8 +415,6 @@
     margin-left: 80px;
   }
    
-   
-   
   /* ==========================================================================
      Helper classes
      ========================================================================== */
@@ -432,10 +429,11 @@
   }
    
   footer {
-    margin-top: 30%;
-    background-color: green;
+    margin-top: 407px;
+    background-color: lightgreen;
     height: 25px;
-   
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
    
   /*
