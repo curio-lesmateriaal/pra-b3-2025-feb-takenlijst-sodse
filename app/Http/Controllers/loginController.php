@@ -22,15 +22,17 @@ $statement->execute([
 $user = $statement->fetch(PDO::FETCH_ASSOC);
 
 if ($statement->rowCount() < 1) {
-    die("gebruikersnaam bestaat niet");
+    header("Location: ../../../tasks/login.php?msg=Gebruikersnaam bestaat niet");
+    die();
 }
 
-if(!password_verify(($password), $user['password'])) {
-    die("wachtwoord bestaat niet");
+if (!password_verify(($password), $user['password'])) {
+    header("Location: ../../../tasks/login.php?msg=Wachtwoord is niet correct");
+    die();
 }
-  
+
 $_SESSION['userid'] = $user['id'];
 
-header("Location: ../../../tasks/index.php?msg=ingelogd");	
+header("Location: ../../../tasks/index.php?msg=ingelogd");
 
 ?>
