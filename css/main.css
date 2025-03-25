@@ -228,8 +228,6 @@ nav a:hover {
 }
 
 .container-create {
-  display: flex;
-  align-items: center;
   margin-left: 25%;
   font-size: 20px;
   border: 2px solid black;
@@ -237,7 +235,7 @@ nav a:hover {
   margin-right: 300px;
   background-color: lightgray;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-  margin-bottom: 218px;
+  margin-bottom: 249px;
 
 }
 
@@ -360,8 +358,30 @@ textarea {
   margin-right: 10px;
 }
 
-.form-group {
-  margin: 1rem 0;
+
+
+.form-group, label {
+  margin-top: 10px;
+  margin-bottom: 0.5rem;
+}
+.form-group1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group1, input{
+  margin-right: 200px;
+}
+
+.form-input{
+  margin-left: 4px;
+}
+
+.afdeling-form, select{
+  margin-right: 1px;
+
 }
 
 .general-homepage {
@@ -376,7 +396,7 @@ textarea {
   background-color: white;
 }
 
-label {
+label{
   cursor: pointer;
   display: inline-block;
   min-width: 140px;
@@ -399,6 +419,14 @@ li{
 .doneweb {
   text-align: center;
 }
+
+
+.container-login {
+
+  text-align: center;
+}
+
+
 
 
 /* ==========================================================================

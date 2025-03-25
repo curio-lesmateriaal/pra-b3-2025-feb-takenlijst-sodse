@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['userid'])) {
+    $msg = "Je bent nog niet ingelogd!";
+    header("Location: login.php?msg=" . $msg);
+}
+?>
+
+
 <!doctype html>
 <html lang="nl">
 

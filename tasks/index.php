@@ -1,10 +1,17 @@
-<?php require_once __DIR__ . '/../backend/config.php'; ?>
+<?php
+session_start();
+if (!isset($_SESSION['userid'])) {
+    $msg = "Je bent nog niet ingelogd!";
+    header("Location: login.php?msg=" . $msg);
+}
+
+require_once __DIR__ . '/../backend/config.php'; ?>
 <!doctype html>
 <html lang="nl">
 
 <head>
     <title>TakenLijst / Overzicht</title>
-    <?php require_once "../head.php" ?>
+
     <link rel="stylesheet" href="style.css">
 </head>
 

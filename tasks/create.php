@@ -1,4 +1,13 @@
-<?php require_once __DIR__ . '/../backend/config.php'; ?>
+<?php
+session_start();
+if (!isset($_SESSION['userid'])) {
+    $msg = "Je bent nog niet ingelogd!";
+    header("Location: login.php?msg=" . $msg);
+}
+
+
+
+require_once __DIR__ . '/../backend/config.php'; ?>
 
 <!doctype html>
 <html lang="nl">
@@ -21,26 +30,28 @@
         <form action="../app/Http/Controllers/takenController.php" method="POST">
             <input type="hidden" name="action" value="create">
 
-            <div class="form-group">
+            <div class="form-group1">
                 <label for="title">Titel van de taak</label>
                 <input type="text" name="title" id="title" class="form-input">
             </div>
-            <div class="form-group">
-                <label for="department">Afdeling</label>
-                <select name="department">
-                    <option value="Personeel">Personeel</option>
-                    <option value="Horeca">Horeca</option>
-                    <option value="Techniek">Techniek</option>
-                    <option value="Inkoop">Inkoop</option>
-                    <option value="Klanten-service">klantenservice</option>
-                    <option value="Groen">Groen</option>
-                </select>
+            <div class="form-group1">
+                <div class="afdeling-form">
+                    <label for="department">Afdeling</label>
+                    <select name="department">
+                        <option value="Personeel">Personeel</option>
+                        <option value="Horeca">Horeca</option>
+                        <option value="Techniek">Techniek</option>
+                        <option value="Inkoop">Inkoop</option>
+                        <option value="Klanten-service">klantenservice</option>
+                        <option value="Groen">Groen</option>
+                    </select>
+                </div>
             </div>
 
 
-            <div class="form-group">
+            <div class="form-group1">
                 <label for="content">Beschrijving</label>
-                <textarea name="content" id="content" class="form-input" rows="4"></textarea>
+                <textarea name="content" id="content" class="form-input" ></textarea>
             </div>
 
             <input type="submit" class="submit-taak" value="Voer taak in">
