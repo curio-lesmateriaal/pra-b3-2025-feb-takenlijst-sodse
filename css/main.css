@@ -23,6 +23,7 @@ h3 {
 
 .TakenDone {
   margin-left: 590px;
+  margin-bottom: 515px;
   color: black;
 
 }
@@ -173,6 +174,7 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 
@@ -235,6 +237,7 @@ nav a:hover {
   margin-right: 300px;
   background-color: lightgray;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  margin-bottom: 218px;
 
 }
 
@@ -255,6 +258,7 @@ textarea {
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
   background-color: lightgray;
+ 
 }
 
 #title-edit {
@@ -301,6 +305,7 @@ textarea {
   margin-right: 300px;
   margin-left: 20%;
   margin-top: 100px;
+  margin-bottom: 100px;
   font-size: 20px;
 }
 
@@ -367,6 +372,7 @@ textarea {
   font-size: 1rem;
   margin-left: 400px;
   margin-top: 65px;
+  margin-bottom: 476px;
   background-color: white;
 }
 
@@ -409,7 +415,7 @@ li{
 }
 
 footer {
-  margin-top: 476px; /* Adjust the top margin to make sure it's not too close to other content */
+ /* Adjust the top margin to make sure it's not too close to other content */
   background-color: lightgreen;
   height: 80px; /* Increase the height of the footer */
   text-align: center;

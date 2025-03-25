@@ -38,7 +38,7 @@ $bericht = $statement->fetch(PDO::FETCH_ASSOC);
             <div class="form-group">
                 <label for="department">Afdeling</label>
                 <select name="department" id="department">
-                
+
                     <option value="Groen" <?php echo ($bericht['afdeling'] == 'Groen') ? 'selected' : ''; ?>>Groen
                     </option>
                     <option value="Personeel" <?php echo ($bericht['afdeling'] == 'Personeel') ? 'selected' : ''; ?>>
@@ -91,7 +91,7 @@ $bericht = $statement->fetch(PDO::FETCH_ASSOC);
 
 </div>
 
-    
+<?php require_once "../footer.php" ?>
 </body>
 
 </html>
