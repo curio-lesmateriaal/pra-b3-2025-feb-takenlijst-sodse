@@ -5,6 +5,10 @@ if (!isset($_SESSION['userid'])) {
     header("Location: login.php?msg=" . $msg);
 }
 
+
+$afdeling = $_GET['afdeling'];
+
+
 require_once __DIR__ . '/../backend/config.php'; ?>
 <!doctype html>
 <html lang="nl">
@@ -18,7 +22,7 @@ require_once __DIR__ . '/../backend/config.php'; ?>
 <body>
     <?php require_once "../header.php" ?>
 
-    <h1>Taken</h1>
+    <h1>Taken van geselecteerde afdeling:</h1>
     <div class="drop-down">
         <form action="afdeling.php" method="GET">
             <select name="afdeling">
@@ -56,10 +60,12 @@ require_once __DIR__ . '/../backend/config.php'; ?>
             require_once '../backend/conn.php';
 
             // Query om taken op te halen met status 'todo'
-            $query = "SELECT * FROM taken WHERE status = 'todo' ORDER BY deadline ASC";
+            $query = "SELECT * FROM taken WHERE status = 'todo' AND afdeling = :afdeling ORDER BY deadline ASC";
 
             $statement = $conn->prepare($query);
-            $statement->execute();
+            $statement->execute([
+                ':afdeling' => $afdeling
+            ]);
             $takenToDo = $statement->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
@@ -81,10 +87,12 @@ require_once __DIR__ . '/../backend/config.php'; ?>
         <div class="in-progress">
             <h1>In progress</h1>
             <?php
-            $query = "SELECT * FROM taken WHERE status = 'in-progress' ORDER BY deadline ASC";
+            $query = "SELECT * FROM taken WHERE status = 'in-progress' AND afdeling = :afdeling ORDER BY deadline ASC";
 
             $statement = $conn->prepare($query);
-            $statement->execute();
+            $statement->execute([
+                ':afdeling' => $afdeling
+            ]);
             $takenInProgress = $statement->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
@@ -106,10 +114,12 @@ require_once __DIR__ . '/../backend/config.php'; ?>
         <div class="done">
             <h1>Done</h1>
             <?php
-            $query = "SELECT * FROM taken WHERE status = 'done' ORDER BY deadline ASC";
+            $query = "SELECT * FROM taken WHERE status = 'done' AND afdeling = :afdeling ORDER BY deadline ASC";
 
             $statement = $conn->prepare($query);
-            $statement->execute();
+            $statement->execute([
+                ':afdeling' => $afdeling
+            ]);
             $takenDone = $statement->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
