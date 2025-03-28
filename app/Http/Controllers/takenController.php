@@ -11,6 +11,7 @@ if ($action == "create") {
     $title = $_POST['title'];
     $content = $_POST['content'];
     $department = $_POST['department'];
+    $deadline = $_POST['deadline'];
 
 
     if (empty($title)) {
@@ -33,7 +34,7 @@ if ($action == "create") {
     require_once '../../../backend/conn.php';
 
     //2. Query
-    $query = "INSERT INTO taken (titel, beschrijving, afdeling) VALUES(:title, :content, :department )";
+    $query = "INSERT INTO taken (titel, beschrijving, afdeling, deadline) VALUES(:title, :content, :department, :deadline)";
 
     //3. Prepare
     $statement = $conn->prepare($query);
@@ -42,7 +43,8 @@ if ($action == "create") {
     $statement->execute([
         ":title" => $title,
         ":content" => $content,
-        ":department" => $department
+        ":department" => $department,
+        ":deadline" => $deadline
     ]);
 
     header("Location: ../../../tasks/index.php?msg=Taak opgeslagen");
@@ -56,6 +58,7 @@ if ($action == "edit") {
     $title = $_POST['title'];
     $content = $_POST['content'];
     $department = $_POST['department'];
+    $deadline = $_POST['deadline'];
     $status = $_POST['status'];
 
 
@@ -66,8 +69,9 @@ if ($action == "edit") {
     if (empty($content)) {
         $errors[] = "Vul een geldige beschrijving in.";
     }
-
-
+    if (empty($deadline)) {
+        $errors[] = "Vul een geldige deadline in.";
+    }
     if (isset($errors)) {
         var_dump($errors);
         exit();
@@ -80,7 +84,7 @@ if ($action == "edit") {
 
     //2. Query
     $query = "UPDATE taken SET titel = :title , beschrijving = :content,
-     afdeling = :department, status = :status WHERE id = :id
+     afdeling = :department, deadline = :deadline, status = :status WHERE id = :id
      ";
 
     //3. Prepare
@@ -91,6 +95,7 @@ if ($action == "edit") {
         ":title" => $title,
         ":content" => $content,
         ":department" => $department,
+        ":deadline" => $deadline,
         ":status" => $status,
         ":id" => $id
     ]);

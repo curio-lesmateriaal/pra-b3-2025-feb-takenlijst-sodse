@@ -27,7 +27,7 @@ if (!isset($_SESSION['userid'])) {
     require_once '../backend/conn.php';
 
     //2. Query
-    $query = "SELECT * FROM  taken WHERE status = 'done'";
+    $query = "SELECT * FROM  taken WHERE status = 'done' ORDER BY deadline ASC";
 
     //3. Prepare
     $statement = $conn->prepare($query);
@@ -46,7 +46,8 @@ if (!isset($_SESSION['userid'])) {
             <ul>
                 <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><span
                             class="titel"><?php echo $taak['titel']; ?></span> <span class="afdeling-done">Afdeling:
-                            <?php echo $taak['afdeling']; ?></span></a></li>
+                            <?php echo $taak['afdeling']; ?></span> <span class="afdeling-done">Deadline:
+                            <?php echo $taak['deadline']; ?></span></a></li>
 
 
 

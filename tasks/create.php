@@ -54,6 +54,12 @@ require_once __DIR__ . '/../backend/config.php'; ?>
                 <textarea name="content" id="content" class="form-input" ></textarea>
             </div>
 
+            <div class="form-group1">
+                <label for="deadline">Deadline</label>
+                <input type="date" name="deadline" id="deadline" class="form-input" >
+            </div>
+
+
             <input type="submit" class="submit-taak" value="Voer taak in">
         </form>
     </div>

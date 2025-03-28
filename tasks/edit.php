@@ -79,6 +79,11 @@ $bericht = $statement->fetch(PDO::FETCH_ASSOC);
             <label for="content">Beschrijving</label>
             <textarea id="content" name="content"><?php echo $bericht['beschrijving']; ?></textarea>
         </div>
+
+        <div class="form-group">
+                <label for="deadline">Deadline</label>
+                <input type="date" id="deadline" name="deadline" value="<?php echo $bericht['deadline']; ?>"> 
+            </div>
         <!-- 
         <div class="form-group"> -->
         <!-- <div class="button"> -->

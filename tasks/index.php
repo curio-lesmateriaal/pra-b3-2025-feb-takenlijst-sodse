@@ -42,7 +42,7 @@ require_once __DIR__ . '/../backend/config.php'; ?>
             require_once '../backend/conn.php';
 
             // Query om taken op te halen met status 'todo'
-            $query = "SELECT * FROM taken WHERE status = 'todo'";
+            $query = "SELECT * FROM taken WHERE status = 'todo' ORDER BY deadline ASC";
 
             $statement = $conn->prepare($query);
             $statement->execute();
@@ -54,7 +54,7 @@ require_once __DIR__ . '/../backend/config.php'; ?>
                     <li>
                         <a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind">
                             <span class="afdeling-done">
-                                <?php echo $taak['titel']; ?> - Afdeling: <?php echo $taak['afdeling']; ?>
+                                <?php echo $taak['titel']; ?> - Afdeling: <?php echo $taak['afdeling']; ?> - Deadline: <?php echo $taak['deadline']; ?>
                             </span>
                         </a>
                     </li>
@@ -66,7 +66,7 @@ require_once __DIR__ . '/../backend/config.php'; ?>
         <div class="in-progress">
             <h1>In progress</h1>
             <?php
-            $query = "SELECT * FROM taken WHERE status = 'in-progress'";
+            $query = "SELECT * FROM taken WHERE status = 'in-progress' ORDER BY deadline ASC";
 
             $statement = $conn->prepare($query);
             $statement->execute();
@@ -78,7 +78,7 @@ require_once __DIR__ . '/../backend/config.php'; ?>
                     <li>
                         <a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind2">
                             <span class="afdeling-done">
-                                <?php echo $taak['titel']; ?> - Afdeling: <?php echo $taak['afdeling']; ?>
+                                <?php echo $taak['titel']; ?> - Afdeling: <?php echo $taak['afdeling']; ?> - Deadline: <?php echo $taak['deadline']; ?>
                             </span>
                         </a>
                     </li>
@@ -90,7 +90,7 @@ require_once __DIR__ . '/../backend/config.php'; ?>
         <div class="done">
             <h1>Done</h1>
             <?php
-            $query = "SELECT * FROM taken WHERE status = 'done'";
+            $query = "SELECT * FROM taken WHERE status = 'done' ORDER BY deadline ASC";
 
             $statement = $conn->prepare($query);
             $statement->execute();
@@ -102,7 +102,7 @@ require_once __DIR__ . '/../backend/config.php'; ?>
                     <li>
                         <a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind3">
                             <span class="afdeling-done">
-                                <?php echo $taak['titel']; ?> - Afdeling: <?php echo $taak['afdeling']; ?>
+                                <?php echo $taak['titel']; ?> - Afdeling: <?php echo $taak['afdeling']; ?> - Deadline: <?php echo $taak['deadline']; ?>
                             </span>
                         </a>
                     </li>
