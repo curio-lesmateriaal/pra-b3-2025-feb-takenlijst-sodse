@@ -161,6 +161,12 @@ a {
 }
 
 
+#links3:hover {
+  color: #0022ff;
+  text-decoration: underline;
+}
+
+
 nav a:hover {
   color: #0022ff;
   text-decoration: underline;

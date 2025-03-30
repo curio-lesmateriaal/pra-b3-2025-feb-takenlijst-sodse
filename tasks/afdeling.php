@@ -21,6 +21,7 @@ require_once __DIR__ . '/../backend/config.php'; ?>
 
 <body>
     <?php require_once "../header.php" ?>
+    
 
     <h1>Taken van geselecteerde afdeling:</h1>
     <div class="drop-down">

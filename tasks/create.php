@@ -20,9 +20,23 @@ require_once __DIR__ . '/../backend/config.php'; ?>
 
 <body>
 
+
+
+
+
     <?php require_once '../header.php'; ?>
 
     <h1 id="title-create">Nieuwe taak</h1>
+    <div class="msg">
+        <?php
+        // Dit is voor het tonen van meldingen
+        if (isset($_GET['msg'])) {
+            $message = $_GET['msg'];
+            echo "<p>$message</p>";
+        }
+        ?>
+    </div>
+
 
 
     <div class="container-create">
@@ -51,12 +65,12 @@ require_once __DIR__ . '/../backend/config.php'; ?>
 
             <div class="form-group1">
                 <label for="content">Beschrijving</label>
-                <textarea name="content" id="content" class="form-input" ></textarea>
+                <textarea name="content" id="content" class="form-input"></textarea>
             </div>
 
             <div class="form-group1">
                 <label for="deadline">Deadline</label>
-                <input type="date" name="deadline" id="deadline" class="form-input" >
+                <input type="date" name="deadline" id="deadline" class="form-input">
             </div>
 
 

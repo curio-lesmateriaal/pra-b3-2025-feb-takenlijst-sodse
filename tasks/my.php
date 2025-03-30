@@ -5,6 +5,8 @@ if (!isset($_SESSION['userid'])) {
     header("Location: login.php?msg=" . $msg);
 }
 
+$userid = $_SESSION['userid'];
+
 require_once __DIR__ . '/../backend/config.php'; ?>
 <!doctype html>
 <html lang="nl">
@@ -35,9 +37,8 @@ require_once __DIR__ . '/../backend/config.php'; ?>
     </div>
     <div class="links">
         <a href="create.php" id="links1">Nieuwe Taak</a>
-        <a href="my.php" id="links3">Bekijk mijn taken</a>
+        <a href="index.php" id="links3">Terug naar dashboard</a>
         <a href="done.php" id="links2">Alle meldingen met status "Done"</a>
-        
     </div>
 
     <div class="msg">
@@ -58,10 +59,12 @@ require_once __DIR__ . '/../backend/config.php'; ?>
             require_once '../backend/conn.php';
 
             // Query om taken op te halen met status 'todo'
-            $query = "SELECT * FROM taken WHERE status = 'todo' ORDER BY deadline ASC";
+            $query = "SELECT * FROM taken WHERE status = 'todo' AND user = :userid ORDER BY deadline ASC";
 
             $statement = $conn->prepare($query);
-            $statement->execute();
+            $statement->execute([
+                ':userid' => $userid
+            ]);
             $takenToDo = $statement->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
@@ -83,10 +86,12 @@ require_once __DIR__ . '/../backend/config.php'; ?>
         <div class="in-progress">
             <h1>In progress</h1>
             <?php
-            $query = "SELECT * FROM taken WHERE status = 'in-progress' ORDER BY deadline ASC";
+            $query = "SELECT * FROM taken WHERE status = 'in-progress' AND user = :userid ORDER BY deadline ASC";
 
             $statement = $conn->prepare($query);
-            $statement->execute();
+            $statement->execute([
+                ':userid' => $userid
+            ]);
             $takenInProgress = $statement->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
@@ -108,10 +113,12 @@ require_once __DIR__ . '/../backend/config.php'; ?>
         <div class="done">
             <h1>Done</h1>
             <?php
-            $query = "SELECT * FROM taken WHERE status = 'done' ORDER BY deadline ASC";
+            $query = "SELECT * FROM taken WHERE status = 'done' AND user = :userid ORDER BY deadline ASC";
 
             $statement = $conn->prepare($query);
-            $statement->execute();
+            $statement->execute([
+                ':userid' => $userid
+            ]);
             $takenDone = $statement->fetchAll(PDO::FETCH_ASSOC);
             ?>
 

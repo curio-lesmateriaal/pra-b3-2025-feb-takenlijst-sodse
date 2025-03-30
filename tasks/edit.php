@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(!isset($_SESSION['userid'])) {
+if (!isset($_SESSION['userid'])) {
     $msg = "Je bent nog niet ingelogd!";
-    header("Location:  login.php?msg=".$msg);
+    header("Location:  login.php?msg=" . $msg);
 }
 ?>
 
@@ -20,6 +20,16 @@ if(!isset($_SESSION['userid'])) {
 <?php require_once "../header.php" ?>
 
 <h1 id="title-edit">Aanpassen taak</h1>
+<div class="msg">
+    <?php
+    // Dit is voor het tonen van meldingen
+    if (isset($_GET['msg'])) {
+        $message = $_GET['msg'];
+        echo "<p>$message</p>";
+    }
+    ?>
+</div>
+
 
 <?php
 //Haal id uit de URL
@@ -33,6 +43,7 @@ $statement->execute([':id' => $id]);
 $bericht = $statement->fetch(PDO::FETCH_ASSOC);
 ?>
 <div class="container-edit">
+
     <!-- Formulier voor edit: -->
     <form action="../app/Http/Controllers/takenController.php" method="POST">
         <input type="hidden" name="action" value="edit">
@@ -81,9 +92,9 @@ $bericht = $statement->fetch(PDO::FETCH_ASSOC);
         </div>
 
         <div class="form-group">
-                <label for="deadline">Deadline</label>
-                <input type="date" id="deadline" name="deadline" value="<?php echo $bericht['deadline']; ?>"> 
-            </div>
+            <label for="deadline">Deadline</label>
+            <input type="date" id="deadline" name="deadline" value="<?php echo $bericht['deadline']; ?>">
+        </div>
         <!-- 
         <div class="form-group"> -->
         <!-- <div class="button"> -->

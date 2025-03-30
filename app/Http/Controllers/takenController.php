@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+$user = $_SESSION['userid'];
 $action = $_POST['action'];
 
 
@@ -15,11 +16,18 @@ if ($action == "create") {
 
 
     if (empty($title)) {
-        $errors[] = "Vul de titel van de taak in.";
+        header("Location: ../../../tasks/create.php?msg=Vul de titel van de taak in.");
+        exit();
     }
 
     if (empty($content)) {
-        $errors[] = "Vul een geldige beschrijving in.";
+       header("Location: ../../../tasks/create.php?msg=Vul een geldige beschrijving in.");
+        exit();
+    }
+
+    if (empty($deadline)) {
+        header("Location: ../../../tasks/create.php?msg=Vul een geldige deadline in.");
+        exit();
     }
 
     if (isset($errors)) {
@@ -34,7 +42,7 @@ if ($action == "create") {
     require_once '../../../backend/conn.php';
 
     //2. Query
-    $query = "INSERT INTO taken (titel, beschrijving, afdeling, deadline) VALUES(:title, :content, :department, :deadline)";
+    $query = "INSERT INTO taken (titel, beschrijving, afdeling, deadline, user) VALUES(:title, :content, :department, :deadline, :user)";
 
     //3. Prepare
     $statement = $conn->prepare($query);
@@ -44,7 +52,8 @@ if ($action == "create") {
         ":title" => $title,
         ":content" => $content,
         ":department" => $department,
-        ":deadline" => $deadline
+        ":deadline" => $deadline,
+        ":user" => $user
     ]);
 
     header("Location: ../../../tasks/index.php?msg=Taak opgeslagen");
@@ -63,14 +72,17 @@ if ($action == "edit") {
 
 
     if (empty($title)) {
-        $errors[] = "Vul de titel van de taak in.";
+        header("Location: ../../../tasks/edit.php?id=$id&msg=Vul de titel van de taak in.");
+        exit();
     }
 
     if (empty($content)) {
-        $errors[] = "Vul een geldige beschrijving in.";
+       header("Location: ../../../tasks/edit.php?id=$id&msg=Vul een geldige beschrijving in.");
+        exit();
     }
     if (empty($deadline)) {
-        $errors[] = "Vul een geldige deadline in.";
+        header("Location: ../../../tasks/edit.php?id=$id&msg=Vul een geldige deadline in.");
+        exit();
     }
     if (isset($errors)) {
         var_dump($errors);
