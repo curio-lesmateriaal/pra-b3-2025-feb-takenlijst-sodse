@@ -132,9 +132,6 @@ a {
   margin: 40px;
 }
 
-
-
-
 .to-do, .in-progress, .done {
   border: 2px solid black;  /* De border blijft vast */
   border-radius: 30px;
@@ -339,7 +336,19 @@ textarea {
   /* Donkerdere blauw bij hover */
 }
 
+.drop-down{
+  margin-left: 40px;
+}
+.index-h1{
+  margin-left: 40px;
+}
+.container-linkjes2{
+  justify-items: ;
+}
 
+.taken-filter{
+  margin-left: -1px;
+}
 
 #title-create {
   display: flex;
