@@ -18,7 +18,8 @@ require_once __DIR__ . '/../backend/config.php'; ?>
 <body>
     <?php require_once "../header.php" ?>
 
-    <h1>Taken</h1>
+    <div class="container-linkjes2">
+    <h1 div class="index-h1">Taken</h1>
     <div class="drop-down">
         <form action="afdeling.php" method="GET">
             <select name="afdeling">
@@ -30,7 +31,7 @@ require_once __DIR__ . '/../backend/config.php'; ?>
                 <option value="Klanten-service">Klantenservice</option>
                 <option value="Groen">Groen</option>
             </select>
-            <input type="submit" value="filter">
+            <input div class="taken-filter" type="submit" value="filter">
         </form>
     </div>
     <div class="links">
