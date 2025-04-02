@@ -24,6 +24,8 @@ require_once __DIR__ . '/../backend/config.php'; ?>
     
 
     <h1>Taken van geselecteerde afdeling:</h1>
+    <div class="container-linkjes2">
+    
     <div class="drop-down">
         <form action="afdeling.php" method="GET">
             <select name="afdeling">
@@ -35,23 +37,24 @@ require_once __DIR__ . '/../backend/config.php'; ?>
                 <option value="Klanten-service">Klantenservice</option>
                 <option value="Groen">Groen</option>
             </select>
-            <input type="submit" value="filter">
+            <input div class="taken-filter" type="submit" value="filter">
         </form>
     </div>
     <div class="links">
         <a href="create.php" id="links1">Nieuwe Taak</a>
+        <a href="index.php" id="links3">Terug naar dashboard</a>
         <a href="done.php" id="links2">Alle meldingen met status "Done"</a>
     </div>
 
-    <div class="msg">
-        <?php
-        // Dit is voor het tonen van meldingen
-        if (isset($_GET['msg'])) {
-            $message = $_GET['msg'];
-            echo "<p>$message</p>";
-        }
+    <?php
+    if (isset($_GET['msg']) && !empty($_GET['msg'])) {
         ?>
-    </div>
+        <div class="msgI">
+            <p><?php echo htmlspecialchars($_GET['msg']); ?></p>
+        </div>
+        <?php
+    }
+    ?>
 
     <div class="container">
         <!-- To-Do -->
