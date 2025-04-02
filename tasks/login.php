@@ -1,7 +1,12 @@
-<div?php session_start(); if (isset($_SESSION['userid'])) { header("Location: index.php?msg=");
+<?php
+session_start();
+if (isset($_SESSION['userid'])) {
+    header("Location: index.php?msg=");
 }
 require_once __DIR__ . '/../backend/config.php';
 ?>
+
+
 
 
 <!doctype html>
@@ -14,13 +19,6 @@ require_once __DIR__ . '/../backend/config.php';
 
     <body>
 
-        <div class="container-login">
-            <h1>Login</h1>
-            <?php if (isset($_GET['msg'])) {
-                echo "<div class='msg'>" . $_GET['msg'] . "</div>";
-            } ?>
-
-<<<<<<< Updated upstream
     <div class="container-login">
         <h1>Login</h1>
         <?php
@@ -32,10 +30,8 @@ require_once __DIR__ . '/../backend/config.php';
             <?php
         }
         ?>
-=======
             <form action="<?php echo $base_url; ?>/app/Http/Controllers/loginController.php" method="POST">
                 <input type="hidden" name="action" value="create">
->>>>>>> Stashed changes
 
                 <div class="stylelogin">
                     <div class="form-group-login">
@@ -65,10 +61,6 @@ require_once __DIR__ . '/../backend/config.php';
                 margin: 0;
             }
 
-<<<<<<< Updated upstream
-
-</body>
-=======
             .container-login {
                 background: #fff;
                 padding: 20px;
@@ -77,7 +69,6 @@ require_once __DIR__ . '/../backend/config.php';
                 text-align: center;
                 width: 550px;
             }
->>>>>>> Stashed changes
 
             .container-login h1 {
                 margin-bottom: 20px;
