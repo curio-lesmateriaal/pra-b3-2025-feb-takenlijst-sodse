@@ -37,19 +37,18 @@ require_once __DIR__ . '/../backend/config.php'; ?>
         <a href="create.php" id="links1">Nieuwe Taak</a>
         <a href="my.php" id="links3">Bekijk mijn taken</a>
         <a href="done.php" id="links2">Alle meldingen met status "Done"</a>
-        
+
     </div>
 
-    <div class="msg">
-        <?php
-        // Dit is voor het tonen van meldingen
-        if (isset($_GET['msg'])) {
-            $message = $_GET['msg'];
-            echo "<p>$message</p>";
-        }
+    <?php
+    if (isset($_GET['msg']) && !empty($_GET['msg'])) {
         ?>
-    </div>
-
+        <div class="msgI">
+            <p><?php echo htmlspecialchars($_GET['msg']); ?></p>
+        </div>
+        <?php
+    }
+    ?>
     <div class="container">
         <!-- To-Do -->
         <div class="to-do">

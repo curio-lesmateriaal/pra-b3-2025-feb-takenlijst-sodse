@@ -33,6 +33,6 @@ if (!password_verify(($password), $user['password'])) {
 
 $_SESSION['userid'] = $user['id'];
 
-header("Location: ../../../tasks/index.php?msg=ingelogd");
+header("Location: ../../../tasks/index.php?msg=Ingelogd");
 
 ?>

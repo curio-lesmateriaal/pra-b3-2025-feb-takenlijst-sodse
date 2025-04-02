@@ -21,9 +21,15 @@ require_once __DIR__ . '/../backend/config.php';
 
     <div class="container-login">
         <h1>Login</h1>
-        <?php if (isset($_GET['msg'])) {
-            echo "<div class='msg'>" . $_GET['msg'] . "</div>";
-        } ?>
+        <?php
+        if (isset($_GET['msg']) && !empty($_GET['msg'])) {
+            ?>
+            <div class="msg">
+                <p><?php echo htmlspecialchars($_GET['msg']); ?></p>
+            </div>
+            <?php
+        }
+        ?>
 
         <form action="<?php echo $base_url; ?>/app/Http/Controllers/loginController.php" method="POST">
             <input type="hidden" name="action" value="create">
@@ -43,6 +49,7 @@ require_once __DIR__ . '/../backend/config.php';
 
         </form>
     </div>
+
 
 </body>
 

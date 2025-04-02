@@ -27,15 +27,17 @@ require_once __DIR__ . '/../backend/config.php'; ?>
     <?php require_once '../header.php'; ?>
 
     <h1 id="title-create">Nieuwe taak</h1>
-    <div class="msg">
-        <?php
-        // Dit is voor het tonen van meldingen
-        if (isset($_GET['msg'])) {
-            $message = $_GET['msg'];
-            echo "<p>$message</p>";
-        }
+
+    <?php
+    if (isset($_GET['msg']) && !empty($_GET['msg'])) {  
         ?>
-    </div>
+        <div class="msg">
+            <p><?php echo htmlspecialchars($_GET['msg']); ?></p> 
+        </div>
+        <?php
+    }
+    ?>
+
 
 
 
