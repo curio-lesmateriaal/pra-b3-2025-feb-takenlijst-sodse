@@ -13,6 +13,7 @@ $query = "SELECT * FROM  users WHERE username = :username";
 
 //3. Prepare
 $statement = $conn->prepare($query);
+
 //4. Execute
 $statement->execute([
     ":username" => $username

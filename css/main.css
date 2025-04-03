@@ -486,7 +486,7 @@ li {
 
 footer {
   /* Adjust the top margin to make sure it's not too close to other content */
-  background-color: lightgreen;
+  background-color: rgb(144, 238, 144);
   height: 80px;
   /* Increase the height of the footer */
   text-align: center;
