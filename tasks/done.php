@@ -41,24 +41,15 @@ if (!isset($_SESSION['userid'])) {
 
 
 
+<?php foreach ($takenDone2 as $taak): ?>
     <div class="TakenDone">
-        <?php foreach ($takenDone2 as $taak): ?>
-            <ul>
-                <li><a href="edit.php?id=<?php echo $taak['id']; ?>"><span
-                            class="titel"><?php echo $taak['titel']; ?></span> <span class="afdeling-done">Afdeling:
-                            <?php echo $taak['afdeling']; ?></span> <span class="afdeling-done">Deadline:
-                            <?php echo $taak['deadline']; ?></span></a></li>
-
-
-
-            </ul>
-
-
-        <?php endforeach; ?>
+        <a href="edit.php?id=<?php echo $taak['id']; ?>" class="task-link">
+            <div class="task-title"><?php echo htmlspecialchars($taak['titel']); ?></div>
+            <span class="afdeling-done">Afdeling: <?php echo $taak['afdeling']; ?></span>
+            <span class="afdeling-done">Deadline: <?php echo $taak['deadline']; ?></span>
+        </a>
     </div>
-
-
-
+<?php endforeach; ?>
 
     <?php require_once "../footer.php" ?>
 
