@@ -23,12 +23,12 @@ $statement->execute([
 $user = $statement->fetch(PDO::FETCH_ASSOC);
 
 if ($statement->rowCount() < 1) {
-    header("Location: ../../../tasks/login.php?msg=Gebruikersnaam bestaat niet");
+    header("Location: ../../../tasks/login.php?msg=Inlog gegevens onjuist");
     die();
 }
 
 if (!password_verify(($password), $user['password'])) {
-    header("Location: ../../../tasks/login.php?msg=Wachtwoord is niet correct");
+    header("Location: ../../../tasks/login.php?msg=Inlog gegevens onjuist");
     die();
 }
 
