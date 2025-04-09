@@ -13,7 +13,7 @@ require_once __DIR__ . '/../backend/config.php';
 <html lang=" nl">
 
 <head>
-    <title>Takenlijst / Login</title>
+    <title>Takenlijst / Registeren</title>
     <?php require_once __DIR__ . '/../head.php'; ?>
 </head>
 
@@ -22,7 +22,7 @@ require_once __DIR__ . '/../backend/config.php';
     <div class="container-login">
 
     <a href="../index.php">Terug naar homepagina</a>
-        <h1>Login</h1>
+        <h1>Registeren</h1>
         <?php
         if (isset($_GET['msg']) && !empty($_GET['msg'])) {
             ?>
@@ -41,11 +41,18 @@ require_once __DIR__ . '/../backend/config.php';
                     <input type="email"name="email"id="email">
                 </div>
 
+                <div class="form-group-login">
+                    <label for="name">Gebruikersnaam</label>
+                    <input type="text" name="name" id="name" class="form-input">
 
                 <div class="form-group-login">
                     <label for="password">Wachtwoord:</label>
                     <input type="password" min="0" name="password" id="password" class="form-input">
                 </div>
+
+                <div class="form-group-login">
+                    <label for="password_confirm">Herhaal wachtwoord:</label>
+                    <input type="password" min="0" name="password_confirm" id="password_confirm" class="form-input">
             </div>
             
             <input type="submit"value="Registeren">

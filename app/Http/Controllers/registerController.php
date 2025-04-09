@@ -1,52 +1,71 @@
-<?php 
-//Checkofiemandníetisingelogd
-/// TODO: start sessie
-if(isset($_SESSION['userid']))
-{
-    die("Kan niet registreren - je bent al ingelogd");
-}
+<?php
+session_start();
 
-//kernbergip 17, stap 2a:
+
 $email = $_POST['email'];
-if(filter_var($email, FILTER_VALIDATE_EMAIL) === false);
-{
-    die('Email is ongeldig');
+if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+    header("Location: ../../../tasks/register.php?msg=Ongeldig emailadres!");
+    exit;
 }
 
-//Kernbegrip17,stap2b
+
 $password = $_POST['password'];
-$password_check = .....................
-if(..........................)
-{
-    die("Wachtwoorden zijn niet gelijk!");
+$password_confirm = $_POST['password_confirm'];
+
+
+if ($password !== $password_confirm) {
+    header("Location: ../../../tasks/register.php?msg=Wachtwoorden komen niet overeen!");
+    exit;
 }
 
-//Kernbegrip17,stap2c:
-require_once 'conn.php';
-$sql= "SELECT* FROM users WHERE username = :email";
+
+
+$name = $_POST['name'];
+if (empty($name)) {
+    header("Location: ../../../tasks/register.php?msg=Naam is verplicht!");
+    exit;
+}
+
+
+require_once '../../../backend/conn.php';
+$sql = "SELECT * FROM users WHERE username = :email";
 $statement = $conn->prepare($sql);
-$statement->execute([":email"=>$email]);
-if($statement->rowCount() > 0)
-{
-    ....................
+$statement->execute([":email" => $email]);
+
+if ($statement->rowCount() > 0) {
+    header("Location: ../../../tasks/register.php?msg=Dit emailadres is al geregistreerd!");
+    exit;
 }
 
-//Kernbegrip17,stap3a:
-if(empty(............))
-{
-    die("Wacht woord mag niet leeg zijn!");
-}
-$hash = ....................
 
-//Kernbegrip17,stap3b:
-$query="INSERT INTO users (username, password) VALUES (:email, :hash)";
-..................................
+$sql = "SELECT * FROM users WHERE naam = :name";
+$statement = $conn->prepare($sql);
+$statement->execute([":name" => $name]);
+
+if ($statement->rowCount() > 0) {
+    header("Location: ../../../tasks/register.php?msg=Deze gebruikersnaam is al geregistreerd!");
+    exit;
+}
+
+
+if (empty($password)) {
+    header("Location: ../../../tasks/register.php?msg=Vul een geldig wachtwoord in!");
+    exit;
+}
+
+
+$hash = password_hash($password, PASSWORD_BCRYPT);
+
+
+$query = "INSERT INTO users (username, password, naam) VALUES (:email, :hash, :name)";
+$statement = $conn->prepare($query);
 $statement->execute([
-    ............................,
-    ............................
+    ":email" => $email,
+    ":name" => $name,
+    ":hash" => $hash
 ]);
 
-//Stuurnaarlogin:
-..................................
-exit;
 
+header("Location: ../../../tasks/login.php?msg=Account aangemaakt!");
+exit;
+?>

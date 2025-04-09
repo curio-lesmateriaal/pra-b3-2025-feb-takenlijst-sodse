@@ -19,6 +19,16 @@
                 </p>
             <?php endif; ?>
 
+            <?php
+            if (!isset($_SESSION['userid'])): ?>
+                <P>
+                <nav><a href="<?php echo $base_url; ?>tasks/register.php">Registreren</a></nav>
+                </p>
+            <?php endif; ?>
+              
+
+        
+
 
         </div>
     </div>

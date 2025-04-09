@@ -37,7 +37,7 @@ require_once __DIR__ . '/../backend/config.php';
 
             <div class="stylelogin">
                 <div class="form-group-login">
-                    <label for="username">Gebruikersnaam:</label>
+                    <label for="username">Email: </label>
                     <input type="text" name="username" id="username" class="form-input">
                 </div>
 
