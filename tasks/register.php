@@ -21,7 +21,7 @@ require_once __DIR__ . '/../backend/config.php';
 
     <div class="container-login">
 
-    <a href="../index.php">Terug naar homepagina</a>
+        <a href="../index.php">Terug naar homepagina</a>
         <h1>Registeren</h1>
         <?php
         if (isset($_GET['msg']) && !empty($_GET['msg'])) {
@@ -37,14 +37,15 @@ require_once __DIR__ . '/../backend/config.php';
 
             <div class="stylelogin">
                 <div class="form-group-login">
-                    <label for="email">E-mailadres:</label> 
-                    <input type="email"name="email"id="email">
+                    <label for="email">E-mailadres:</label>
+                    <input type="email" name="email" id="email" class="form-input">
                 </div>
 
                 <div class="form-group-login">
                     <label for="name">Gebruikersnaam</label>
                     <input type="text" name="name" id="name" class="form-input">
-
+                </div>
+                
                 <div class="form-group-login">
                     <label for="password">Wachtwoord:</label>
                     <input type="password" min="0" name="password" id="password" class="form-input">
@@ -53,9 +54,10 @@ require_once __DIR__ . '/../backend/config.php';
                 <div class="form-group-login">
                     <label for="password_confirm">Herhaal wachtwoord:</label>
                     <input type="password" min="0" name="password_confirm" id="password_confirm" class="form-input">
+                </div>
             </div>
-            
-            <input type="submit"value="Registeren">
+
+            <input type="submit" value="Registeren">
 
         </form>
     </div>
@@ -133,7 +135,7 @@ require_once __DIR__ . '/../backend/config.php';
             border-radius: 5px;
             font-size: 16px;
             transition: 0.3s;
-            margin-right: 100px;    
+            margin-right: 100px;
         }
 
         input[type="submit"]:hover {

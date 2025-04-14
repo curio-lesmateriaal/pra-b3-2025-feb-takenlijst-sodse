@@ -21,14 +21,14 @@ if (!isset($_SESSION['userid'])) {
 
 <h1 id="title-edit">Aanpassen taak</h1>
 <?php
-    if (isset($_GET['msg']) && !empty($_GET['msg'])) {  
-        ?>
-        <div class="msg">
-            <p><?php echo htmlspecialchars($_GET['msg']); ?></p> 
-        </div>
-        <?php
-    }
+if (isset($_GET['msg']) && !empty($_GET['msg'])) {
     ?>
+    <div class="msg">
+        <p><?php echo htmlspecialchars($_GET['msg']); ?></p>
+    </div>
+    <?php
+}
+?>
 
 <?php
 //Haal id uit de URL
@@ -98,10 +98,8 @@ $bericht = $statement->fetch(PDO::FETCH_ASSOC);
         <div class="form-group"> -->
         <!-- <div class="button"> -->
         <input type="submit" class="submit-taak" value="Pas aan">
+    </form>
 </div>
-</div>
-</div>
-</form>
 
 <!--<div class="button"> -->
 <form action="../app/Http/Controllers/takenController.php" method="POST">
@@ -109,11 +107,7 @@ $bericht = $statement->fetch(PDO::FETCH_ASSOC);
     <input type="hidden" name="id" value="<?php echo $id; ?>">
     <input type="submit" class="submit-taak-delete" value="Verwijder bericht">
 </form>
-</div>
-</form>
-</div>
 
-</div>
 
 <?php require_once "../footer.php" ?>
 </body>

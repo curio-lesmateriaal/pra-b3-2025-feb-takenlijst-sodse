@@ -35,7 +35,6 @@ require_once __DIR__ . '/../backend/config.php'; ?>
             <input div class="taken-filter" type="submit" value="filter">
         </form>
     </div>
-    </div>
     <div class="links">
         <a href="create.php" id="links1">Nieuwe Taak</a>
         <a href="index.php" id="links3">Terug naar dashboard</a>
@@ -70,18 +69,15 @@ require_once __DIR__ . '/../backend/config.php'; ?>
             $takenToDo = $statement->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
-            <ul>
-                <?php foreach ($takenToDo as $taak): ?>
-                    <li>
-                        <a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind">
-                            <span class="afdeling-done">
-                                <?php echo $taak['titel']; ?> - Afdeling: <?php echo $taak['afdeling']; ?> - Deadline:
-                                <?php echo $taak['deadline']; ?>
-                            </span>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+            <?php foreach ($takenToDo as $taak): ?>
+                <a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind">
+                    <span class="afdeling-done">
+                        <div><?php echo htmlspecialchars($taak['titel']); ?></div>
+                        <div>Afdeling: <?php echo htmlspecialchars($taak['afdeling']); ?></div>
+                        <div>Deadline: <?php echo htmlspecialchars($taak['deadline']); ?></div>
+                    </span>
+                </a>
+            <?php endforeach; ?>
         </div>
 
         <!-- In-Progress -->
@@ -97,18 +93,15 @@ require_once __DIR__ . '/../backend/config.php'; ?>
             $takenInProgress = $statement->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
-            <ul>
-                <?php foreach ($takenInProgress as $taak): ?>
-                    <li>
-                        <a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind2">
-                            <span class="afdeling-done">
-                                <?php echo $taak['titel']; ?> - Afdeling: <?php echo $taak['afdeling']; ?> - Deadline:
-                                <?php echo $taak['deadline']; ?>
-                            </span>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+            <?php foreach ($takenInProgress as $taak): ?>
+                <a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind2">
+                    <span class="afdeling-done">
+                        <div><?php echo htmlspecialchars($taak['titel']); ?></div>
+                        <div>Afdeling: <?php echo htmlspecialchars($taak['afdeling']); ?></div>
+                        <div>Deadline: <?php echo htmlspecialchars($taak['deadline']); ?></div>
+                    </span>
+                </a>
+            <?php endforeach; ?>
         </div>
 
         <!-- Done -->
@@ -124,18 +117,16 @@ require_once __DIR__ . '/../backend/config.php'; ?>
             $takenDone = $statement->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
-            <ul>
-                <?php foreach ($takenDone as $taak): ?>
-                    <li>
-                        <a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind3">
-                            <span class="afdeling-done">
-                                <?php echo $taak['titel']; ?> - Afdeling: <?php echo $taak['afdeling']; ?> - Deadline:
-                                <?php echo $taak['deadline']; ?>
-                            </span>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+            <?php foreach ($takenDone as $taak): ?>
+                <a href="edit.php?id=<?php echo $taak['id']; ?>" class="tasks-ind3">
+                    <span class="afdeling-done">
+                        <div><?php echo htmlspecialchars($taak['titel']); ?></div>
+                        <div>Afdeling: <?php echo htmlspecialchars($taak['afdeling']); ?></div>
+                        <div>Deadline: <?php echo htmlspecialchars($taak['deadline']); ?></div>
+                    </span>
+
+                </a>
+            <?php endforeach; ?>
         </div>
     </div>
 
